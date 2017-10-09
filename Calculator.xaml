@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         xmlns:SystemGesture="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Calculator" Height="443.68" Width="331.134" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Normal" Icon="./Images/calculator.ico">
+        Title="Calculator" Height="384.48" Width="280.734" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Normal" Icon="./Images/calculator.ico">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="FontWeight" Value="Bold"></Setter>
@@ -14,34 +14,47 @@
         </Style>
     </Window.Resources>
     <Grid Background="Gainsboro">
-         
-        <Button Margin="10,175,264.8,189.4" Content="1" x:Name="Btn1"></Button>
-        <Button Margin="65,175,209.8,189.4" Content="2" x:Name="Btn2"></Button>
-        <Button Margin="120,175,154.8,189.4" Content="3" x:Name="Btn3" Click="Btn3_Click"></Button>
-        <Button Margin="10,230,264.8,134.4" Content="4" x:Name="Btn4"></Button>
-        <Button Margin="65,230,209.8,134.4" Content="5" x:Name="Btn5"></Button>
-        <Button Margin="120,230,154.8,134.4" Content="6" x:Name="Btn6"></Button>
-        <Button Margin="10,285,264.8,79.4" Content="7" x:Name="Btn7"></Button>
-        <Button Margin="65,285,209.8,79.4" Content="8" x:Name="Btn8"></Button>
-        <Button Margin="120,285,154.8,79.4" Content="9" x:Name="Btn9"></Button>
-        <Button Margin="10,340,264.8,24.4" Content="0" x:Name="Btn0"></Button>
-        <Button Margin="65,340,209.8,24.4" Content="." x:Name="BtnDecimal"></Button>
-        <Button Margin="120,340,154.8,24.4" Content="=" Background="#FF4391D4" x:Name="BtnEquals"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.ColumnSpan="4" FontSize="36" TextAlignment="Right" BorderThickness="1.5" Name="Output">0</TextBox>
 
-        <Button Margin="175,120,99.8,244.4" Content="AC" Background="#FFAEAEAE"></Button>
-        <Button Margin="175,175,99.8,189.4" Content="/" Background="#FFAEAEAE"></Button>
-        <Button Margin="175,230,99.8,134.4" Content="*" Background="#FFAEAEAE"></Button>
-        <Button Margin="175,285,99.8,79.4" Content="-" Background="#FFAEAEAE"></Button>
-        <Button Margin="175,340,99.8,24.4" Content="+" Background="#FFAEAEAE"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="0" Content="0" x:Name="Btn0"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="1" Content="." x:Name="BtnDecimal"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="2" Content="=" Background="#FF4391D4" x:Name="BtnEquals"/>
+        <Button Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="3" Content="+" Background="#FFAEAEAE"></Button>
 
-        <Button Margin="10,120,264.8,244.4" Content="("></Button>
-        <Button Margin="65,120,209.8,244.4" Content=")"></Button>
-        <Button Margin="120,120,154.8,244.4" Content="CE"></Button>
-
-        <TextBox Width="Auto" Height="50" FontSize="36" TextAlignment="Right" Margin="10,65,99.8,299.4" BorderThickness="1.5" Name="Output">0</TextBox>
-
-
+        <Button Grid.ColumnSpan="1" Grid.Row="4" Content="1" x:Name="Btn1"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="4" Grid.Column="1" Content="2" x:Name="Btn2"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="4" Grid.Column="2" Content="3" x:Name="Btn3" Click="Btn3_Click"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="4" Grid.Column="3" Content="-" Background="#FFAEAEAE"></Button>
 
 
+        <Button Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="0" Content="4" x:Name="Btn4"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="1" Content="5" x:Name="Btn5"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="2" Content="6" x:Name="Btn6"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="3" Content="*" Background="#FFAEAEAE"></Button>
+
+        <Button Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="0" Content="7" x:Name="Btn7"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="1" Content="8" x:Name="Btn8"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="2" Content="9" x:Name="Btn9"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="3" Content="/" Background="#FFAEAEAE"></Button>
+
+
+        <Button Grid.ColumnSpan="1" Grid.Row="1" Grid.Column="3" Content="AC" Background="#FFAEAEAE"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="1" Grid.Column="2" Content="CE"></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="1" Grid.Column="0" Content="("></Button>
+        <Button Grid.ColumnSpan="1" Grid.Row="1" Grid.Column="1" Content=")"></Button>
     </Grid>
 </Window>
